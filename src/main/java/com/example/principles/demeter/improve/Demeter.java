@@ -1,4 +1,4 @@
-package com.example.principles.demeter;
+package com.example.principles.demeter.improve;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +7,7 @@ import java.util.List;
 public class Demeter {
 
     public static void main(String[] args) {
+        System.out.println("~~~使用迪米特法則~~~");
         SchoolManager schoolManager = new SchoolManager();
         schoolManager.printAllEmployee(new CollegeManager());
     }
@@ -47,6 +48,13 @@ class CollegeManager {
         }
         return list;
     }
+    public void printEmployee() {
+        List<CollegeEmployee> list1 = getAllEmployee();
+        System.out.println("------------學院員工------------");
+        for (CollegeEmployee e : list1) {
+            System.out.println(e.getId());
+        }
+    }
 }
 
 class SchoolManager {
@@ -61,13 +69,8 @@ class SchoolManager {
         return list;
     }
 
-    //該方法輸出 學校總部 & 學院 所有員工信息 id
     void printAllEmployee(CollegeManager sub) {
-        List<CollegeEmployee> list1 = sub.getAllEmployee();
-        System.out.println("------------學院員工------------");
-        for (CollegeEmployee e : list1) {
-            System.out.println(e.getId());
-        }
+        sub.printEmployee();
 
         List<Employee> list2 = this.getAllEmployee();
         System.out.println("------------學校總部員工------------");
@@ -75,6 +78,7 @@ class SchoolManager {
             System.out.println(e.getId());
         }
     }
+
 }
 
 

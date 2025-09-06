@@ -1,4 +1,4 @@
-package com.example.singleton.type7;
+package com.example.pattern.singleton.type7;
 
 /**
  * 懶漢模式 (線程安全的)

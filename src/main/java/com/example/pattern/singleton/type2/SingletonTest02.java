@@ -1,4 +1,4 @@
-package com.example.singleton.type2;
+package com.example.pattern.singleton.type2;
 
 /**
  * 餓漢模式(靜態代碼塊)

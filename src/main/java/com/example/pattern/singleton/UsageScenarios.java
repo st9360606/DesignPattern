@@ -1,4 +1,4 @@
-package com.example.singleton;
+package com.example.pattern.singleton;
 
 /**
  * 使用場景

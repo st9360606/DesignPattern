@@ -1,4 +1,4 @@
-package com.example.singleton.type3;
+package com.example.pattern.singleton.type3;
 
 /**
  * 懶漢模式 (線程不安全的)

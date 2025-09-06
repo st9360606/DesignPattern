@@ -1,11 +1,12 @@
-package com.example.singleton.type4;
+package com.example.pattern.singleton.type6;
 
 /**
  * 懶漢模式 (線程安全的)
- * 會帶來新的問題，效率太低，這個方法只要執行一次就夠了
- * 實際開發中，不要使用這種方式
+ * 雙重檢查
+ * volatile 增加可見性，多線程下每個線程執行完成都會通知主線程
+ * 實際開發中，推薦使用
  */
-public class SingletonTest04 {
+public class SingletonTest06 {
 
 	public static void main(String[] args) {
         System.out.println("---懶漢模式 (線程安全的)---");
@@ -15,18 +16,21 @@ public class SingletonTest04 {
 		System.out.println("instance.hashCode=" + instance.hashCode());
 		System.out.println("instance2.hashCode=" + instance2.hashCode());
 	}
-
 }
 
-
 class Singleton {
-	private static Singleton instance;
+	private static volatile Singleton instance; //這裡加入 volatile ，可見性，多線程下每個線程執行完成都會通知主線程
 	
 	private Singleton() {}
 
-	public static synchronized Singleton getInstance() { //這裡加入 synchronized
+	public static Singleton getInstance() {
 		if(instance == null) {
-			instance = new Singleton();
+			synchronized (Singleton.class) { //這裡也加入 synchronized
+				if(instance == null) {
+					instance = new Singleton();
+				}
+			}
+			
 		}
 		return instance;
 	}

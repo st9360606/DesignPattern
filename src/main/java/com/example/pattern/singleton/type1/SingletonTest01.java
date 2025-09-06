@@ -1,5 +1,5 @@
 
-package com.example.singleton.type1;
+package com.example.pattern.singleton.type1;
 
 /**
  * 餓漢模式(靜態變量)

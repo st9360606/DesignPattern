@@ -1,4 +1,4 @@
-package com.example.singleton.type8;
+package com.example.pattern.singleton.type8;
 
 /**
  * 使用枚舉，可以實現單例，可以避免多線程同步問題

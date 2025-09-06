@@ -1,0 +1,325 @@
+@startuml
+class com.example.principles.interface_isolation.Segregation1 {
++ {static} void main(String[])
+}
+
+interface com.example.principles.interface_isolation.Interface1 {
+~ void operation1()
+~ void operation2()
+~ void operation3()
+~ void operation4()
+~ void operation5()
+}
+
+class com.example.principles.interface_isolation.B {
++ void operation1()
++ void operation2()
++ void operation3()
++ void operation4()
++ void operation5()
+}
+
+class com.example.principles.interface_isolation.D {
++ void operation1()
++ void operation2()
++ void operation3()
++ void operation4()
++ void operation5()
+}
+
+class com.example.principles.interface_isolation.A {
++ void depend1(Interface1)
++ void depend2(Interface1)
++ void depend3(Interface1)
+}
+
+class com.example.principles.interface_isolation.C {
++ void depend1(Interface1)
++ void depend4(Interface1)
++ void depend5(Interface1)
+}
+
+class com.example.principles.liskov.Liskov {
++ {static} void main(String[])
+}
+
+class com.example.principles.liskov.A {
++ int func1(int,int)
+}
+
+class com.example.principles.liskov.B {
++ int func1(int,int)
++ int func2(int,int)
+}
+
+class com.example.principles.singleresponsibility.improve.singleresponsibility2 {
++ {static} void main(String[])
+}
+
+class com.example.principles.singleresponsibility.improve.Vehicle {
++ void run(String)
++ void runAir(String)
++ void runWater(String)
+}
+
+class com.example.principles.demeter.Demeter {
++ {static} void main(String[])
+}
+
+class com.example.principles.demeter.Employee {
+- String id
++ void setId(String)
++ String getId()
+}
+
+
+class com.example.principles.demeter.CollegeEmployee {
+- String id
++ void setId(String)
++ String getId()
+}
+
+
+class com.example.principles.demeter.CollegeManager {
++ List<CollegeEmployee> getAllEmployee()
+}
+
+class com.example.principles.demeter.SchoolManager {
++ List<Employee> getAllEmployee()
+~ void printAllEmployee(CollegeManager)
+}
+
+class com.example.Main {
++ {static} void main(String[])
+}
+
+class com.example.principles.ocp.improve.Ocp {
++ {static} void main(String[])
+}
+
+class com.example.principles.ocp.improve.GraphicEditor {
++ void drawShape(Shape)
+}
+
+abstract class com.example.principles.ocp.improve.Shape {
+~ int m_type
++ {abstract}void draw()
+}
+
+
+class com.example.principles.ocp.improve.Rectangle {
++ void draw()
+}
+
+class com.example.principles.ocp.improve.Circle {
++ void draw()
+}
+
+class com.example.principles.ocp.improve.Triangle {
++ void draw()
+}
+
+class com.example.principles.ocp.improve.OtherGraphic {
++ void draw()
+}
+
+class com.example.principles.demeter.improve.Demeter {
++ {static} void main(String[])
+}
+
+class com.example.principles.demeter.improve.Employee {
+- String id
++ void setId(String)
++ String getId()
+}
+
+
+class com.example.principles.demeter.improve.CollegeEmployee {
+- String id
++ void setId(String)
++ String getId()
+}
+
+
+class com.example.principles.demeter.improve.CollegeManager {
++ List<CollegeEmployee> getAllEmployee()
++ void printEmployee()
+}
+
+class com.example.principles.demeter.improve.SchoolManager {
++ List<Employee> getAllEmployee()
+~ void printAllEmployee(CollegeManager)
+}
+
+class com.example.principles.inversion.improve.DependencyInversion2 {
++ {static} void main(String[])
+}
+
+interface com.example.principles.inversion.improve.IOpenAndClose {
++ void open(ITV)
+}
+
+interface com.example.principles.inversion.improve.ITV {
++ void play()
+}
+
+class com.example.principles.inversion.improve.LG {
++ void play()
+}
+
+class com.example.principles.inversion.improve.OpenAndClose {
++ void open(ITV)
+}
+
+class com.example.principles.singleresponsibility.singleresponsibility1 {
++ {static} void main(String[])
+}
+
+class com.example.principles.singleresponsibility.RoadVehicle {
++ void run(String)
+}
+
+class com.example.principles.singleresponsibility.AirVehicle {
++ void run(String)
+}
+
+class com.example.principles.singleresponsibility.WaterVehicle {
++ void run(String)
+}
+
+class com.example.principles.inversion.improve.DependencyInversion {
++ {static} void main(String[])
+}
+
+interface com.example.principles.inversion.improve.IReceiver {
++ String getInfo()
+}
+
+class com.example.principles.inversion.improve.Email {
++ String getInfo()
+}
+
+class com.example.principles.inversion.improve.Weixin {
++ String getInfo()
+}
+
+class com.example.principles.inversion.improve.Person {
++ void receive(IReceiver)
+}
+
+class com.example.principles.inversion.DependencyInversion {
++ {static} void main(String[])
+}
+
+class com.example.principles.inversion.Email {
++ String getInfo()
+}
+
+class com.example.principles.inversion.Person {
++ void receive(Email)
+}
+
+class com.example.principles.interface_isolation.improve.Segregation2 {
++ {static} void main(String[])
+}
+
+interface com.example.principles.interface_isolation.improve.Interface1 {
+~ void operation1()
+}
+
+interface com.example.principles.interface_isolation.improve.Interface2 {
+~ void operation2()
+~ void operation3()
+}
+
+interface com.example.principles.interface_isolation.improve.Interface3 {
+~ void operation4()
+~ void operation5()
+}
+
+class com.example.principles.interface_isolation.improve.B {
++ void operation1()
++ void operation2()
++ void operation3()
+}
+
+class com.example.principles.interface_isolation.improve.D {
++ void operation1()
++ void operation4()
++ void operation5()
+}
+
+class com.example.principles.interface_isolation.improve.A {
++ void depend1(Interface1)
++ void depend2(Interface2)
++ void depend3(Interface2)
+}
+
+class com.example.principles.interface_isolation.improve.C {
++ void depend1(Interface1)
++ void depend4(Interface3)
++ void depend5(Interface3)
+}
+
+class com.example.principles.liskov.improve.Liskov {
++ {static} void main(String[])
+}
+
+class com.example.principles.liskov.improve.Base {
+}
+class com.example.principles.liskov.improve.A {
++ int func1(int,int)
+}
+
+class com.example.principles.liskov.improve.B {
+- A a
++ int func1(int,int)
++ int func2(int,int)
++ int func3(int,int)
+}
+
+
+class com.example.principles.ocp.Ocp {
++ {static} void main(String[])
+}
+
+class com.example.principles.ocp.GraphicEditor {
++ void drawShape(Shape)
++ void drawRectangle(Shape)
++ void drawCircle(Shape)
++ void drawTriangle(Shape)
+}
+
+class com.example.principles.ocp.Shape {
+~ int m_type
+}
+
+class com.example.principles.ocp.Rectangle {
+}
+class com.example.principles.ocp.Circle {
+}
+class com.example.principles.ocp.Triangle {
+}
+
+
+com.example.principles.interface_isolation.Interface1 <|.. com.example.principles.interface_isolation.B
+com.example.principles.interface_isolation.Interface1 <|.. com.example.principles.interface_isolation.D
+com.example.principles.liskov.A <|-- com.example.principles.liskov.B
+com.example.principles.ocp.improve.Shape <|-- com.example.principles.ocp.improve.Rectangle
+com.example.principles.ocp.improve.Shape <|-- com.example.principles.ocp.improve.Circle
+com.example.principles.ocp.improve.Shape <|-- com.example.principles.ocp.improve.Triangle
+com.example.principles.ocp.improve.Shape <|-- com.example.principles.ocp.improve.OtherGraphic
+com.example.principles.inversion.improve.ITV <|.. com.example.principles.inversion.improve.LG
+com.example.principles.inversion.improve.IOpenAndClose <|.. com.example.principles.inversion.improve.OpenAndClose
+com.example.principles.inversion.improve.IReceiver <|.. com.example.principles.inversion.improve.Email
+com.example.principles.inversion.improve.IReceiver <|.. com.example.principles.inversion.improve.Weixin
+com.example.principles.interface_isolation.improve.Interface1 <|.. com.example.principles.interface_isolation.improve.B
+com.example.principles.interface_isolation.improve.Interface2 <|.. com.example.principles.interface_isolation.improve.B
+com.example.principles.interface_isolation.improve.Interface1 <|.. com.example.principles.interface_isolation.improve.D
+com.example.principles.interface_isolation.improve.Interface3 <|.. com.example.principles.interface_isolation.improve.D
+com.example.principles.liskov.improve.Base <|-- com.example.principles.liskov.improve.A
+com.example.principles.liskov.improve.Base <|-- com.example.principles.liskov.improve.B
+com.example.principles.ocp.Shape <|-- com.example.principles.ocp.Rectangle
+com.example.principles.ocp.Shape <|-- com.example.principles.ocp.Circle
+com.example.principles.ocp.Shape <|-- com.example.principles.ocp.Triangle
+@enduml

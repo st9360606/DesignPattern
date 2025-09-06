@@ -1,10 +1,10 @@
-package com.example.pattern.factory.absfactory.pizzastore.order;
+package com.example.pattern.factory.improve.absfactory.pizzastore.order;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import com.example.pattern.factory.absfactory.pizzastore.pizza.Pizza;
+import com.example.pattern.factory.improve.absfactory.pizzastore.pizza.Pizza;
 
 public class OrderPizza {
 

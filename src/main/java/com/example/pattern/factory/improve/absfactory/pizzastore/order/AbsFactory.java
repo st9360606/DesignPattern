@@ -1,6 +1,6 @@
-package com.example.pattern.factory.absfactory.pizzastore.order;
+package com.example.pattern.factory.improve.absfactory.pizzastore.order;
 
-import com.example.pattern.factory.absfactory.pizzastore.pizza.Pizza;
+import com.example.pattern.factory.improve.absfactory.pizzastore.pizza.Pizza;
 
 //一個抽象工廠模式的抽象層(AbsFact Interface)
 public interface AbsFactory {

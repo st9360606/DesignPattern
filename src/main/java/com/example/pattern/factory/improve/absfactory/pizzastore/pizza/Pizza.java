@@ -1,4 +1,4 @@
-package com.example.pattern.factory.absfactory.pizzastore.pizza;
+package com.example.pattern.factory.improve.absfactory.pizzastore.pizza;
 
 //將 Pizza 作為 抽象類
 public abstract class Pizza {

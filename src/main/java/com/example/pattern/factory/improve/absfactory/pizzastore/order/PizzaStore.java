@@ -1,4 +1,4 @@
-package com.example.pattern.factory.absfactory.pizzastore.order;
+package com.example.pattern.factory.improve.absfactory.pizzastore.order;
 
 public class PizzaStore {
 

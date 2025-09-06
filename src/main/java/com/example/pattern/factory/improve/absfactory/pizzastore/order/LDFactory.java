@@ -1,9 +1,9 @@
-package com.example.pattern.factory.absfactory.pizzastore.order;
+package com.example.pattern.factory.improve.absfactory.pizzastore.order;
 
 
-import com.example.pattern.factory.absfactory.pizzastore.pizza.LDCheesePizza;
-import com.example.pattern.factory.absfactory.pizzastore.pizza.LDPepperPizza;
-import com.example.pattern.factory.absfactory.pizzastore.pizza.Pizza;
+import com.example.pattern.factory.improve.absfactory.pizzastore.pizza.LDCheesePizza;
+import com.example.pattern.factory.improve.absfactory.pizzastore.pizza.LDPepperPizza;
+import com.example.pattern.factory.improve.absfactory.pizzastore.pizza.Pizza;
 
 //工廠子類
 public class LDFactory implements AbsFactory {

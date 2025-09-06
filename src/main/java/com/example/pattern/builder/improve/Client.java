@@ -1,5 +1,10 @@
 package com.example.pattern.builder.improve;
 
+/**
+ * 建造者模式
+ * House-> HouseBuilder -> CommonHouse -> HighBuilding -> HouseDirector -> Client
+ */
+
 public class Client {
 	public static void main(String[] args) {
 		

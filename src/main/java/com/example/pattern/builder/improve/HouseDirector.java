@@ -1,5 +1,10 @@
 package com.example.pattern.builder.improve;
 
+/**
+ * 建造者模式
+ * House-> HouseBuilder -> CommonHouse -> HighBuilding -> HouseDirector -> Client
+ */
+
 // 指揮者，這裡去指定製作流程，返回產品
 public class HouseDirector {
 	

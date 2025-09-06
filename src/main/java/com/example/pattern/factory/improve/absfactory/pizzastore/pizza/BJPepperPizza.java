@@ -1,4 +1,4 @@
-package com.example.pattern.factory.absfactory.pizzastore.pizza;
+package com.example.pattern.factory.improve.absfactory.pizzastore.pizza;
 
 public class BJPepperPizza extends Pizza {
     @Override

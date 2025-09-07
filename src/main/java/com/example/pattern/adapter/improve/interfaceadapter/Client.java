@@ -1,4 +1,9 @@
-package com.example.pattern.adapter.interfaceadapter;
+package com.example.pattern.adapter.improve.interfaceadapter;
+
+/**
+ * 接口適配器模式
+ */
+
 
 public class Client {
 	public static void main(String[] args) {
@@ -8,7 +13,7 @@ public class Client {
 			@Override
 			public void m1() {
 				// TODO Auto-generated method stub
-				System.out.println("ʹ����m1�ķ���");
+				System.out.println("使用了m1的方法");
 			}
 		};
 		

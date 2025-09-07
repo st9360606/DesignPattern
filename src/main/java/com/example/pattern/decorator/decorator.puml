@@ -1,0 +1,53 @@
+@startuml
+class com.atguigu.decorator.Chocolate {
+}
+class com.atguigu.decorator.Milk {
+}
+class com.atguigu.decorator.Espresso {
+}
+class com.atguigu.decorator.LongBlack {
+}
+abstract class com.atguigu.decorator.Drink {
++ String des
+- float price
++ String getDes()
++ void setDes(String)
++ float getPrice()
++ void setPrice(float)
++ {abstract}float cost()
+}
+
+
+class com.atguigu.decorator.DeCaf {
+}
+class com.atguigu.decorator.ShortBlack {
+}
+class com.atguigu.decorator.Soy {
+}
+class com.atguigu.decorator.Coffee {
++ float cost()
+}
+
+class com.atguigu.decorator.CoffeeBar {
++ {static} void main(String[])
+}
+
+class com.atguigu.decorator.Decorator {
+- Drink obj
++ float cost()
++ String getDes()
+}
+
+
+
+
+com.atguigu.decorator.Decorator <|-- com.atguigu.decorator.Chocolate
+com.atguigu.decorator.Decorator <|-- com.atguigu.decorator.Milk
+com.atguigu.decorator.Coffee <|-- com.atguigu.decorator.Espresso
+com.atguigu.decorator.Coffee <|-- com.atguigu.decorator.LongBlack
+com.atguigu.decorator.Coffee <|-- com.atguigu.decorator.DeCaf
+com.atguigu.decorator.Coffee <|-- com.atguigu.decorator.ShortBlack
+com.atguigu.decorator.Decorator <|-- com.atguigu.decorator.Soy
+com.atguigu.decorator.Drink <|-- com.atguigu.decorator.Coffee
+com.atguigu.decorator.Drink <|-- com.atguigu.decorator.Decorator
+@enduml

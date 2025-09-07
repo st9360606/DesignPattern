@@ -1,4 +1,9 @@
-package com.example.pattern.adapter.interfaceadapter;
+package com.example.pattern.adapter.improve.interfaceadapter;
+
+/**
+ * 接口適配器模式
+ */
+
 
 public interface Interface4 {
 	public void m1();
